@@ -1,0 +1,28 @@
+.franja{
+    background-color: rgb(43, 193, 238);
+    margin:0px;
+    padding: 10px;
+}
+.titulo{
+    font-size: 3.5vw;
+    color: white;
+}
+.cuerpo{
+    background-image: url("../Imagen/fondo.jpg");
+}
+.tarjeta-login{
+    background-color: white;
+    margin: 110px;
+    border-radius: 5px;
+    height: 350px;
+    padding: 30px;
+}
+.Titulo-login{
+    font-size: 2.3vw;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.botones{
+    color:white !important;
+}
+
