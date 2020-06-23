@@ -1,0 +1,59 @@
+.combo-cant {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 25px 0px;
+}
+
+.caracteristicas {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fecha,
+.despacho {
+    width: 100%;
+    display: flex;
+}
+
+.col1,
+.col2 {
+    width: 50%;
+}
+
+.date {
+    width: 50%;
+    margin: 15px;
+    margin-left: 25px;
+}
+
+.time {
+    width: 40%;
+    margin: 15px;
+    margin-left: 25px;
+}
+
+.calc {
+    display: flex;
+    align-items: center;
+}
+
+.precio {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.carrito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.agregar-carrito {
+    width: 70%;
+    margin: 0 auto;
+    margin: 30px;
+}

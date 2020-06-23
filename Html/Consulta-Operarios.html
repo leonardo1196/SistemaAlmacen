@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d4bf67580b.js" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../librerias/morris.css">
+    <link rel="stylesheet" href="../CSS/gerente.css">
+    <script src="../librerias/morris.min.js"></script>
+    <link rel="stylesheet" href="../CSS/Seguridad.css">
+    <link rel="stylesheet" href="../CSS/ventas.css">
+    <link rel="stylesheet" href="../CSS/mantenimiento.css">
+    
+    <title>Sistema de Almacenamiento</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class=" navbar-brand " href="{% url 'inicio' %}">
+                <img src="../Imagen/almacen.png" width="40 " height="40" alt="CEIIS">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="menu">
+                    <ul class="navbar-nav mr-auto navegacion">
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Gerente.html">Inicio</a>
+                        </li>
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Seguridad.html">Seguridad</a>
+                        </li>
+                        <li id="ConsultaGerencial" class="nav-item active">
+                            <a class="nav-link" href="../Html/Consulta-Gerencial.html">Consulta gerencial</a>
+                        </li>
+                        <li id="Mantenimiento" class="nav-item ">
+                            <a class="nav-link" href="../Html/Mantenimiento.html">Mantenimiento de Catalogo de Producto</a>
+                        </li>
+                        <li id="Mantenimiento" class="nav-item">
+                            <a class="nav-link" href="../Html/Catalogo-Operarios.html">Mantenimiento de Catalogo de Operarios</a>
+                        </li>
+                        <li id="Venta" class="nav-item">
+                            <a class="nav-link" href="../Html/ventasGerente.html">Venta</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron-fluid m-0 col-4 perfil">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="jumbotron-fluid col-12">
+                            <div class="imagen-perfil"> 
+                                <img src="../Imagen/gerente.png" alt="" class="perfil-img">
+                            </div>
+                            <p class="Nombre"> Frey Mauricio Enciso Quichca</p>
+                            <p class="Puesto text-center"> Gerente</p>
+                            <a type="button" class="btn btn-primary btn-lg btn-block botones" id="LogOut" >LogOut</a>
+                        </div>       
+                    </div>
+                </div>
+                
+            </div>
+            <div class="jumbotron-fluid m-0 col-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="jumbotron-fluid col-12 franja">
+                                <p class="text-center txt-iniciorapido">Consulta de Operarios</p>
+                        </div>
+                        <div class="jumbotron-fluid col-12">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        
+                                        <form class="">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1" class="labels">Codigo de Operario:</label>
+                                                    <input class="form-control" type="text" placeholder="Ingrese el codigo de operario" >
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1" class="labels">Nombre:</label>
+                                                    <input class="form-control" type="text" placeholder="Ingrese Nombre de operario" >
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1" class="labels">Apellido de Operario:</label>
+                                                    <input class="form-control" type="text" placeholder="Ingrese el Apellido de operario" >
+                                              </div>
+                                              <div class="form-group">
+                                                <a href="../Html/Consulta-Operarios.html" class="btn btn-success botones-formulario" data-toggle="modal" data-target="#exampleModal1">Buscar</a>
+                                              </div>
+                                              <table class="table tabla-mantenimiento">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Codigo de Operario</th>
+                                                        <th scope="col">Nombre</th> 
+                                                        <th scope="col">Fecha de inicio</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>20160090B</td>
+                                                        <td>Marcos Ronceros</td>
+                                                        <td>22/01/2019</td>
+                                                        
+                                                    </tr>
+                                                    
+                                                    
+                                                </tbody>
+                                            </table>
+                                            <div class="jumbotron-fluid m-0 col-12" >
+                                                <p class="text-hleft titulo">Ventas:</p>
+                                            </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputEmail1">Inicio de Periodo:</label>
+                                                        <select class="form-control">
+                                                            <option>Enero</option>
+                                                              <option>Febrero</option>
+                                                              <option>Marzo</option>
+                                                              <option>Abril</option>
+                                                              <option>Mayo</option>
+                                                              <option>Junio</option>
+                                                              <option>Julio</option>
+                                                              <option>Agosto</option>
+                                                              <option>Septiembre</option>
+                                                              <option>Octubre</option>
+                                                              <option>Noviembre</option>
+                                                              <option>Diciembre</option>
+                                                            </select>
+                                                        <br>
+                                                        
+                                                      </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputEmail1">Fin de Periodo:</label>
+                                                        <select class="form-control">
+                                                            <option>Enero</option>
+                                                              <option>Febrero</option>
+                                                              <option>Marzo</option>
+                                                              <option>Abril</option>
+                                                              <option>Mayo</option>
+                                                              <option>Junio</option>
+                                                              <option>Julio</option>
+                                                              <option>Agosto</option>
+                                                              <option>Septiembre</option>
+                                                              <option>Octubre</option>
+                                                              <option>Noviembre</option>
+                                                              <option>Diciembre</option>
+                                                            </select>
+                                                        
+                                                      </div>
+                                                      
+                                                  
+                                        </form>
+                                        <a href="" class="btn btn-success botones-formulario" data-toggle="modal" data-target="#exampleModal2">Calcular</a>
+                                        <br>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <div class="junbotron- col-12">
+                            <div class="Container">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        <div id="myfirstchart" ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    </div>
+    <script>
+ var month_data = [
+  {"period": "2020-01", "ventas-soles": 407,"monto-esperado":400},
+  {"period": "2020-02","ventas-soles": 351,"monto-esperado":420},
+  {"period": "2020-03", "ventas-soles": 269,"monto-esperado":350},
+  {"period": "2020-04", "ventas-soles": 246,"monto-esperado":320},
+  {"period": "2020-05", "ventas-soles": 257,"monto-esperado":320},
+  {"period": "2020-06","ventas-soles": 248,"monto-esperado":320}
+];
+Morris.Line({
+  element: 'myfirstchart',
+  data: month_data,
+  xkey: 'period',
+  ykeys: ['ventas-soles','monto-esperado'],
+  labels: ['Venta-Soles','Monto-esperado'],
+  smooth: false
+});
+
+    </script>
+</body>
+</html>

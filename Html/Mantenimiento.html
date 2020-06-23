@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/Seguridad.css">
     <link rel="stylesheet" href="../CSS/mantenimiento.css">
+    
 </head>
 
 <body>
@@ -27,19 +28,22 @@
                 <div class="menu">
                     <ul class="navbar-nav mr-auto navegacion">
                         <li id="Seguridad" class="nav-item ">
-                            <a class="nav-link" href="">Seguridad</a>
+                            <a class="nav-link" href="../Html/Gerente.html">Inicio</a>
+                        </li>
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Seguridad.html">Seguridad</a>
                         </li>
                         <li id="ConsultaGerencial" class="nav-item">
-                            <a class="nav-link" href="">Consulta gerencial</a>
+                            <a class="nav-link" href="../Html/Consulta-Gerencial.html">Consulta gerencial</a>
                         </li>
                         <li id="Mantenimiento" class="nav-item active">
-                            <a class="nav-link" href="">Mantenimiento de Catalogo de Producto</a>
+                            <a class="nav-link" href="../Html/Mantenimiento.html">Mantenimiento de Catalogo de Producto</a>
                         </li>
                         <li id="Mantenimiento" class="nav-item">
-                            <a class="nav-link" href="">Mantenimiento de Catalogo de Operarios</a>
+                            <a class="nav-link" href="../Html/Catalogo-Operarios.html">Mantenimiento de Catalogo de Operarios</a>
                         </li>
                         <li id="Venta" class="nav-item">
-                            <a class="nav-link" href="">Venta</a>
+                            <a class="nav-link" href="../Html/ventasGerente.html">Venta</a>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +75,12 @@
                 <div class="jumbotron-fluid m-0 col-12" >
                     <p class="text-hleft titulo">Almacén:</p>
                 </div>
+                <div class="jumbotron-fluid m-0 col-12" >
+                    <form class="form-inline my-2 my-lg-0 buscar">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Código almacen" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                      </form>
+                </div>
                 <div class="jumbotron-fluid m-0 col-12">
                     <div class="container-fluid">
                         <div class="row justify-content-center">
@@ -98,7 +108,7 @@
                                             <td>S/.100.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success">Editar</a>
+                                                <a href="../Html/EditarAlmacen.html" class="btn btn-success">Editar</a>
                                                 <a href="" class="btn btn-danger">Quitar</a>
                                             </td>
                                             
@@ -112,7 +122,7 @@
                                             <td>S/.100.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success">Editar</a>
+                                                <a href="../Html/EditarAlmacen.html" class="btn btn-success">Editar</a>
                                                 <a href="" class="btn btn-danger">Quitar</a>
                                             </td>
                                             
@@ -126,7 +136,7 @@
                                             <td>S/.100.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success">Editar</a>
+                                                <a href="../Html/EditarAlmacen.html" class="btn btn-success">Editar</a>
                                                 <a href="" class="btn btn-danger">Quitar</a>
                                             </td>
                                             
@@ -140,7 +150,7 @@
                                             <td>S/.100.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success">Editar</a>
+                                                <a href="../Html/EditarAlmacen.html" class="btn btn-success">Editar</a>
                                                 <a href="" class="btn btn-danger">Quitar</a>
                                             </td>
                                             
@@ -154,7 +164,7 @@
                                             <td>S/.100.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success">Editar</a>
+                                                <a href="../Html/EditarAlmacen.html" class="btn btn-success">Editar</a>
                                                 <a href="" class="btn btn-danger">Quitar</a>
                                             </td>
                                             
@@ -180,13 +190,19 @@
 
                 </div>
                 <div class="btnes">
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Añadir producto almacen</a>
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Zonas de Almacen</a>
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Contenedor</a>
+                    <a href="../Html/Añadir-Almacen.html" class="btn btn-success btnes-añadir d-line" >Añadir producto almacen</a>
+                    <a href="../Html/Catalogo-Zona.html" class="btn btn-success btnes-añadir d-line" >Zonas de Almacen</a>
+                    <a href="../Html/Catalogo-contenedor.html" class="btn btn-success btnes-añadir d-line" >Contenedor</a>
                 </div>
                 
                 <div class="jumbotron-fluid m-0 col-12" >
                     <p class="text-left titulo">Despacho:</p>
+                </div>
+                <div class="jumbotron-fluid m-0 col-12" >
+                    <form class="form-inline my-2 my-lg-0 buscar">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Código de Despacho" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                      </form>
                 </div>
                 <div class="jumbotron-fluid m-0 col-12">
                     <div class="container-fluid">
@@ -199,8 +215,7 @@
                                             <th scope="col">Código Producto</th>
                                             <th scope="col">Objeto</th>
                                             <th scope="col">Empaque</th>
-                                            <th scope="col">Cantidad-Maxima</th>
-                                            <th scope="col">Cantidad-Mínimo</th>
+                                            
                                             <th scope="col">Precio</th>
                                             <th scope="col">Acciones</th>
                                             
@@ -212,12 +227,11 @@
                                             <td>Desp-0001</td>
                                             <td>OBJ-003</td>
                                             <td>EMP-0005</td>
-                                            <td>1</td>
-                                            <td>5</td>
+                                            
                                             <td>S/.10.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success button">Editar</a>
+                                                <a href="../Html/Editar-despacho.html" class="btn btn-success button">Editar</a>
                                                 <a href="" class="btn btn-danger button">Quitar</a>
                                             </td>
                                             
@@ -227,12 +241,11 @@
                                             <td>Desp-0001</td>
                                             <td>OBJ-004</td>
                                             <td>EMP-0007</td>
-                                            <td>1</td>
-                                            <td>6</td>
+                                            
                                             <td>S/.10.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success button">Editar</a>
+                                                <a href="../Html/Editar-despacho.html" class="btn btn-success button">Editar</a>
                                                 <a href="" class="btn btn-danger button">Quitar</a>
                                             </td>
                                         </tr>
@@ -241,12 +254,11 @@
                                             <td>Desp-0001</td>
                                             <td>OBJ-007</td>
                                             <td>EMP-0012</td>
-                                            <td>1</td>
-                                            <td>10</td>
+                                            
                                             <td>S/.10.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success button">Editar</a>
+                                                <a href="../Html/Editar-despacho.html" class="btn btn-success button">Editar</a>
                                                 <a href="" class="btn btn-danger button">Quitar</a>
                                             </td>
                                         </tr>
@@ -255,12 +267,11 @@
                                             <td>Desp-0001</td>
                                             <td>OBJ-0015</td>
                                             <td>EMP-0023</td>
-                                            <td>1</td>
-                                            <td>10</td>
+                                            
                                             <td>S/.10.00</td>
                                             <td>
                                                 
-                                                <a href="" class="btn btn-success button">Editar</a>
+                                                <a href="../Html/Editar-despacho.html" class="btn btn-success button">Editar</a>
                                                 <a href="" class="btn btn-danger button">Quitar</a>
                                             </td>
                                         </tr>
@@ -285,9 +296,9 @@
 
                 </div>
                 <div class="btnes">
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Añadir producto despacho</a>
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Empaque</a>
-                    <a href="" class="btn btn-success btnes-añadir d-line" >Objeto</a>
+                    <a href="../Html/Añadir-Despacho.html" class="btn btn-success btnes-añadir d-line" >Añadir producto despacho</a>
+                    <a href="../Html/Catalogo-Empaque.html" class="btn btn-success btnes-añadir d-line" >Empaque</a>
+                    <a href="../Html/Catalogo-Objeto.html" class="btn btn-success btnes-añadir d-line" >Objeto</a>
                 </div>
             </div>
         </div>

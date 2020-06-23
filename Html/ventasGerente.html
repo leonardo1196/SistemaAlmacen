@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de alamcenamiento-Ventas</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d4bf67580b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Seguridad.css">
+    <link rel="stylesheet" href="../CSS/ventas.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class=" navbar-brand " href="">
+                <img src="../Imagen/almacen.png" width="40 " height="40" alt="CEIIS">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="menu">
+                    <ul class="navbar-nav mr-auto navegacion">
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Gerente.html">Inicio</a>
+                        </li>
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Seguridad.html">Seguridad</a>
+                        </li>
+                        <li id="ConsultaGerencial" class="nav-item">
+                            <a class="nav-link" href="../Html/Consulta-Gerencial.html">Consulta gerencial</a>
+                        </li>
+                        <li id="Mantenimiento" class="nav-item ">
+                            <a class="nav-link" href="../Html/Mantenimiento.html">Mantenimiento de Catalogo de Producto</a>
+                        </li>
+                        <li id="Mantenimiento" class="nav-item">
+                            <a class="nav-link" href="../Html/Catalogo-Operarios.html">Mantenimiento de Catalogo de Operarios</a>
+                        </li>
+                        <li id="Venta" class="nav-item active">
+                            <a class="nav-link" href="../Html/ventasGerente.html">Venta</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron-fluid m-0 col-4 perfil">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="jumbotron-fluid col-12">
+                            <div class="imagen-perfil">
+                                <img src="../Imagen/gerente.png" alt="" class="perfil-img">
+                            </div>
+                            <p class="Nombre"> Frey Mauricio Enciso Quichca</p>
+                            <p class="Puesto text-center"> Gerente</p>
+                            <a type="button" class="btn btn-primary btn-lg btn-block botones" id="LogOut">LogOut</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron-fluid m-0 col-8">
+                <div class="jumbotron-fluid m-0 col-12 franja">
+                    <p class="text-center text-seguridad">Ventas</p>
+                </div>
+                <div class="jumbotron-fluid col-12">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <form action="">
+                                    <form class="form-inline">
+                                        
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1" class="labels">Ingresar el tipo objeto:</label>
+                                                <select class="form-control">
+                                                    <option>Selecciona el tipo de objeto</option>
+                                                      <option>Militar</option>
+                                                      <option>Medico</option>
+                                                      <option>Perecible</option>
+                                                      <option>Electronico</option>
+                                                      <option>Vestimenta</option>
+                                                      <option>Liquidos</option>
+                                                      
+              
+                                                    </select>
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Cantidad:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar cantidad">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Largo:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar Largo" >
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Ancho:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar Ancho">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Alto:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar Alto">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Radio:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar Radio">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Peso:</label>
+                                                <input class="form-control" type="text" placeholder="Ingresar Peso">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Recepcion:</label>
+                                                <input type="date" name="recepcion" id="recepcion" class="form-control ">
+                                                <br>
+                                                <input type="time" name="recepcion" id="recepcion" class="form-control ">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">Entrega:</label>
+                                                <input type="date" name="recepcion" id="recepcion" class="form-control ">
+                                                <br>
+                                                <input type="time" name="recepcion" id="recepcion" class="form-control ">
+                                              </div>
+                                              <div class="form-group">
+                                                <p class="lead">¿Servicio de Despacho?.</p>
+                                                    <input type="radio" name="despacho" id="desp-no"><label for="desp-si">No</label><br>
+                                                    <input type="radio" name="despacho" id="desp-si"><label for="desp-si">Sí</label>
+                                              </div>
+                                          <div class="form-group">
+                                            <a href="../Html/ventasGerente.html" class="btn btn-success botones-formulario" data-toggle="modal" data-target="#exampleModal1">Validar y Calcular Precio</a>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Precio Total:</label>
+                                            <input class="form-control" type="text" value="S/.300.00" readonly>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Temperatura:</label>
+                                            <input class="form-control" type="text" value="20°C" readonly>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Humedad:</label>
+                                            <input class="form-control" type="text" value="20%" readonly>
+                                          </div>
+                                          
+                                        </form>
+                                </form>
+                                <a href="../Html/Carrito-Compra-Gerente.html" class="btn btn-success botones-formulario" data-toggle="modal" data-target="#exampleModal2">Añadir a Carrito</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                 
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Validacion</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Si existen espacios disponibles.
+                          
+                        </div>
+                        <div class="modal-footer">
+                            <a  href="../Html/ventasGerente.html" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</a>
+                            <a  href="../Html/ventasGerente.html" type="button" class="btn btn-primary">Registrar</a>
+                        </div>
+                      </div>
+                    </div>
+                 
+                  
+                </div>
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        
+                      </div>
+                      <div class="modal-footer">
+                          <a  href="../Html/ventasGerente.html" type="button" class="btn btn-secondary" data-dismiss="modal">Continuar Comprando</a>
+                          <a  href="../Html/Carrito-Compra-Gerente.html" type="button" class="btn btn-primary">Ir al carrito</a>
+                      </div>
+                    </div>
+                  </div>
+             
+              
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

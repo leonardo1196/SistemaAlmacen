@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d4bf67580b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/gerente.css">
+    <link rel="stylesheet" href="../CSS/mantenimiento.css">
+    <title>Sistema de Almacenamiento</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class=" navbar-brand " href="{% url 'inicio' %}">
+                <img src="../Imagen/almacen.png" width="40 " height="40" alt="CEIIS">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="menu">
+                    <ul class="navbar-nav mr-auto navegacion">
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/Operario-General.html">Inicio</a>
+                        </li>
+                        <li id="Seguridad" class="nav-item ">
+                            <a class="nav-link" href="../Html/ventasOperario.html">Venta</a>
+                        </li>
+                        
+                        <li id="ConsultaGerencial" class="nav-item">
+                            <a class="nav-link" href="../Html/Registro-Ingreso.html">Registrar Ingreso</a>
+                        </li>
+                        
+                        <li id="ConsultaGerencial" class="nav-item ">
+                            <a class="nav-link" href="../Html/Registro-Recepcion.html">Registrar Recepcion</a>
+                        </li>
+                        <li id="ConsultaGerencial" class="nav-item active">
+                            <a class="nav-link" href="../Html/Registro-Transporte.html">Registrar Transporte</a>
+                        </li>
+                        <li id="ConsultaGerencial" class="nav-item">
+                            <a class="nav-link" href="../Html/Registro-Almacen.html">Registrar Almacen</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron-fluid m-0 col-4 perfil">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="jumbotron-fluid col-12">
+                            <div class="imagen-perfil"> 
+                                <img src="../Imagen/gerente.png" alt="" class="perfil-img">
+                            </div>
+                            <p class="Nombre">Leonardo Ronceros Ramirez</p>
+                            <p class="Puesto text-center">Operario</p>
+                            <a type="button" class="btn btn-primary btn-lg btn-block botones" id="LogOut" >LogOut</a>
+                        </div>       
+                    </div>
+                </div>
+                
+            </div>
+            <div class="jumbotron-fluid m-0 col-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="jumbotron-fluid col-12 franja">
+                                <p class="text-center txt-iniciorapido">Registro de Transporte</p>
+                        </div>
+                        <div class="jumbotron-fluid col-12">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        <form action="">
+                                            <form class="form-inline">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1" class="labels">Codigo de Paquete:</label>
+                                                        <input class="form-control" type="text" placeholder="Ingrese el codigo de paquete" >
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <a href="../Html/Registro-Recepcion.html" class="btn btn-success botones-formulario" data-toggle="modal" data-target="#exampleModal1">Validar</a>
+                                                  </div>
+                                                  
+                                                  <div class="form-group">
+                                                    <label for="exampleInputEmail1">Coordenada X:</label>
+                                                    <input class="form-control" type="text" value="50.00 m" readonly>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label for="exampleInputEmail1">Coordenada Y:</label>
+                                                    <input class="form-control" type="text" value="80.00 m" readonly>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label for="exampleInputEmail1">Coordenada Z:</label>
+                                                    <input class="form-control" type="text" value="20.00 m" readonly>
+                                                  </div>
+                                                </form>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jumbotron-fluid col-12">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        <table class="table tabla-mantenimiento">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Codigo de Paquete</th>
+                                                    <th scope="col">Hora de llegada </th>
+                                                    <th scope="col">Status</th>  
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>VN-00001</td>
+                                                    <td>2:30 pm</td>
+                                                    <td>Pendiente</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>VN-00002</td>
+                                                    <td>2:20 pm</td>
+                                                    <td>Pendiente</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>VN-00003</td>
+                                                    <td>2:00 pm</td>
+                                                    <td>En cola</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>VN-00004</td>
+                                                    <td>12:20 pm</td>
+                                                    <td>Transportado</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>VN-00005</td>
+                                                    <td>10:20 am</td>
+                                                    <td>Transportado</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <a href="../Html/Registro-Almacen.html" class="btn btn-success botones-formulario" >Siguiente</a>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>                   
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Validacion</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  El paquete pasa a cola de transporte.
+                                  <br>
+                                  Datos de ruta obtenidos.
+                                </div>
+                                <div class="modal-footer">
+                                    <a  href="../Html/Registro-Transporte.html" type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</a>
+                                    <a  href="../Html/Registro-Transporte.html" type="button" class="btn btn-primary">Registrar</a>
+                                </div>
+                              </div>
+                            </div>
+                         
+                          
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    </div>
+</body>
+</html>
